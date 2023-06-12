@@ -41,7 +41,7 @@ public class NowPlaying implements RocketBotCommand {
         GuildVoiceState memberVoiceState = member.getVoiceState();
 
         if(!memberVoiceState.inAudioChannel()) { //checks presence of a member
-            event.reply("You need to be in a voice channel").setEphemeral(true).queue(); //try russian
+            event.reply("You need to be in a voice channel").setEphemeral(true).queue();
             return;
         }
 
@@ -49,7 +49,7 @@ public class NowPlaying implements RocketBotCommand {
         GuildVoiceState selfVoiceState = self.getVoiceState();
 
         if(!selfVoiceState.inAudioChannel()) { //checks presence in a channel
-            event.reply("I am not in an audio channel").setEphemeral(true).queue(); //try russian
+            event.reply("I am not in an audio channel").setEphemeral(true).queue();
             return;
         }
 
@@ -64,6 +64,7 @@ public class NowPlaying implements RocketBotCommand {
             return;
         }
         AudioTrackInfo info = guildMusicManager.getTrackScheduler().getPlayer().getPlayingTrack().getInfo();
+
         EmbedBuilder embedBuilder = new EmbedBuilder();
         embedBuilder.setColor(6113681);
         embedBuilder.setTitle("Currently Playing"); //try russian

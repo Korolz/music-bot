@@ -5,37 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1d4cf63-753f-4a94-8146-c56b5ede8c9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/ButtonListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/CommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/RocketBotCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Clear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Loop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/NowPlaying.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Play.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Radio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Shutdown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Skip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/lavaplayer/AudioForwarder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/lavaplayer/GuildMusicManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/lavaplayer/PlayerManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/lavaplayer/TrackScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/ButtonListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/ButtonListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/RocketBotButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/RocketBotButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/AddButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/AddButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/ChoosePlaylistsButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/ChoosePlaylistsButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/LoopButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/LoopButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/RemoveButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/buttons/RemoveButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/NowPlaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/NowPlaying.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Play.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Radio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioChill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioChill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioPhonk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioPhonk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioPivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioPivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioRap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioRap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/RadioWave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Shutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/commands/Shutdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/rocketbot/lavaplayer/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/rocketbot/lavaplayer/PlayerManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +68,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Korolz/Projects/RocketBoostDiscordBot/src/main/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,

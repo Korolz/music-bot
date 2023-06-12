@@ -1,59 +1,31 @@
 package me.rocketbot;
 
-import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
-import me.rocketbot.lavaplayer.GuildMusicManager;
-import me.rocketbot.lavaplayer.PlayerManager;
+import me.rocketbot.buttons.ChoosePlaylistsButton;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-import java.io.File;
-import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ButtonListener extends ListenerAdapter {
-
+    private List<RocketBotButton> buttons = new ArrayList<>();
+    private List<String> playlists = new ArrayList<>(Arrays.asList("pivo", "rap", "phonk", "chill", "wave"));//list of playlists NOTE: ADD ID OF BUTTON HERE IF ADDING NEW PLAYLIST
     @Override
     public void onButtonInteraction(ButtonInteractionEvent event) {
-        if (event.getButton().getId().equals("loop")) {
-            GuildMusicManager guildMusicManager = PlayerManager.get().getGuildMusicManager(event.getGuild());
-            boolean isRepeat = !guildMusicManager.getTrackScheduler().isLoop();
-            guildMusicManager.getTrackScheduler().setLoop(isRepeat);
-            event.reply("**Repeat** is now " + isRepeat).setEphemeral(true).queue();
-        }
-        if (event.getButton().getId().equals("add")){
-            GuildMusicManager guildMusicManager = PlayerManager.get().getGuildMusicManager(event.getGuild());
-            AudioTrackInfo info = guildMusicManager.getTrackScheduler().getPlayer().getPlayingTrack().getInfo();
-
-            //String jdbcUrl = "jdbc:sqlite:/C:\\Users\\Korolz\\rocket.db";
-            String jdbcUrl = "jdbc:sqlite:" + new File("rocket.db").getAbsolutePath();
-            String sql = "INSERT INTO tracks(title,link) VALUES(?,?)";
-            try(Connection connection = DriverManager.getConnection(jdbcUrl);
-                PreparedStatement pstmt = connection.prepareStatement(sql)) {
-                    pstmt.setString(1, info.title);
-                    pstmt.setString(2, info.uri);
-                    pstmt.executeUpdate();
-
-                    event.reply("Track " + info.title + " has been added to the RocketPlaylist").queue();
-            } catch (SQLException e) {
-                event.reply("I guess this track is already in RocketPlaylist").setEphemeral(true).queue();
+        for(RocketBotButton button : buttons){
+            if(button.getId().equals(event.getButton().getId())) {
+                button.execute(event);
+                return;
             }
-        }
-        if (event.getButton().getId().equals("remove")){
-            GuildMusicManager guildMusicManager = PlayerManager.get().getGuildMusicManager(event.getGuild());
-            AudioTrackInfo info = guildMusicManager.getTrackScheduler().getPlayer().getPlayingTrack().getInfo();
-
-            //String jdbcUrl = "jdbc:sqlite:/C:\\Users\\Korolz\\rocket.db";
-            String jdbcUrl = "jdbc:sqlite:" + new File("rocket.db").getAbsolutePath();
-            String sql = "DELETE FROM tracks WHERE link = ?";
-
-            try(Connection connection = DriverManager.getConnection(jdbcUrl);
-                PreparedStatement pstmt = connection.prepareStatement(sql)) {
-                    pstmt.setString(1, info.uri);
-                    pstmt.executeUpdate();
-
-                    event.reply("Track " + info.title + " has been removed from the RocketPlaylist").queue();
-            } catch (SQLException e) {
-                event.reply("I guess this track is not in RocketPlaylist").setEphemeral(true).queue();
+            for(String playlist : playlists){
+                if(event.getButton().getId().equals(playlist)){
+                    buttons.get(0).execute(event);
+                }
             }
         }
     }
+    public void add(RocketBotButton button) {
+    buttons.add(button);
+}
 }

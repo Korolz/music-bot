@@ -53,7 +53,6 @@ public class Radio implements RocketBotCommand {
 
         PlayerManager playerManager = PlayerManager.get();
 
-        //String jdbcUrl = "jdbc:sqlite:/C:\\Users\\Korolz\\rocket.db";
         String jdbcUrl = "jdbc:sqlite:" + new File("rocket.db").getAbsolutePath();
         ArrayList<String> radioPlaylist = new ArrayList<String>();
 

@@ -48,8 +48,12 @@ public class PlayerManager {
 
             @Override
             public void playlistLoaded(AudioPlaylist playlist) {
-                for (AudioTrack track : playlist.getTracks())
-                    guildMusicManager.getTrackScheduler().queue(track);
+                if(playlist.isSearchResult())
+                    guildMusicManager.getTrackScheduler().queue(playlist.getTracks().get(0));
+                else {
+                    for (AudioTrack track : playlist.getTracks())
+                        guildMusicManager.getTrackScheduler().queue(track);
+                }
             }
 
             @Override

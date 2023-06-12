@@ -23,13 +23,13 @@ public class Play implements RocketBotCommand {
 
     @Override
     public String getDescription() {
-        return "Will add a song to a queue"; //try russian
+        return "Will add a song to a queue";
     }
 
     @Override
     public List<OptionData> getOptions() {
         List<OptionData> options = new ArrayList<>();
-        options.add(new OptionData(OptionType.STRING, "link", "link to the song(YouTube, SoundCloud, etc)", true)); //try russian
+        options.add(new OptionData(OptionType.STRING, "link", "link to the song(YouTube, SoundCloud, etc)", true));
         return options;
     }
 
@@ -39,7 +39,7 @@ public class Play implements RocketBotCommand {
         GuildVoiceState memberVoiceState = member.getVoiceState();
 
         if(!memberVoiceState.inAudioChannel()) { //checks presence of a member
-            event.reply("You need to be in a voice channel").setEphemeral(true).queue(); //try russian
+            event.reply("You need to be in a voice channel").setEphemeral(true).queue();
             return;
         }
 
@@ -50,12 +50,13 @@ public class Play implements RocketBotCommand {
             event.getGuild().getAudioManager().openAudioConnection(memberVoiceState.getChannel());
         } else {
             if(selfVoiceState.getChannel() != memberVoiceState.getChannel()) {
-                event.reply("You are not in the same channel as me").setEphemeral(true).queue(); //try russian
+                event.reply("You are not in the same channel as me").setEphemeral(true).queue();
                 return;
             }
         }
 
         String link = event.getOption("link").getAsString();
+        String name = link;
         try {
             new URI(link);
         } catch (URISyntaxException e) {
@@ -63,7 +64,7 @@ public class Play implements RocketBotCommand {
         }
 
         PlayerManager playerManager = PlayerManager.get();
-        event.reply("**Queuing** [track](" + link + ")").queue();
+        event.reply("**Queuing**: " + name).queue();
         playerManager.play(event.getGuild(), link);
     }
 }
